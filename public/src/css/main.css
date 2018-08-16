@@ -1,0 +1,124 @@
+.new-post {
+    padding: 16px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.new-post header,
+.posts header {
+    margin-bottom: 20px;
+}
+
+.posts .post {
+    padding-left: 10px;
+    border-left: 3px solid #a21b24;
+    margin-bottom: 30px;
+}
+
+.posts .post .info {
+    color: #aaa;
+    font-style: italic;
+}
+
+.error,
+.success {
+    text-align: center;
+}
+
+.error {
+    border: 1px solid red;
+    background-color: #f9b5af;
+    color: red;
+}
+
+.error ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.success {
+    border: 1px solid green;
+    background-color: #d1f9da;
+    color: green;
+}
+
+
+                .images-upload-block {
+        margin: 5px 4px;
+    }
+    
+    .upload-img,
+    .images-upload-block {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+    
+    .upload-img,
+    .uploaded-block {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 0;
+    }
+    
+    .uploaded-block {
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .upload-img {
+        border: 2px dashed #d7d6d6;
+        line-height: 80px;
+        text-align: center;
+        color: #a9a7a7;
+    }
+    
+    .upload-img:hover {
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+    }
+    
+    .upload-img:hover .fa {
+        transform: scale(1.2, 1.2);
+        -webkit-transform: scale(1.2, 1.2);
+        -moz-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
+        -o-transform: scale(1.2, 1.2);
+    }
+    
+    .upload-img input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+    
+    .uploaded-block img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .uploaded-block .close {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        opacity: 1;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        padding: 0;
+        z-index: 99;
+        background: rgba(255, 255, 255, 0.3);
+        font-size: 20px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        display: inline-block;
+        border: 3px solid #fff;
+    }
+    
+    .uploaded-block img {
+        padding: 0 !important;
+    }

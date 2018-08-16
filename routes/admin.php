@@ -1,0 +1,28 @@
+<?php
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+
+		Config::set('auth.defines', 'admin');
+		Route::get('login', 'AdminAuth@login');
+		Route::post('login', 'AdminAuth@dologin');
+		Route::get('forgot/password', 'AdminAuth@forgot_password');
+		Route::post('forgot/password', 'AdminAuth@forgot_password_post');
+		Route::get('reset/password/{token}', 'AdminAuth@reset_password');
+		Route::post('reset/password/{token}', 'AdminAuth@reset_password_final');
+		Route::group(['middleware' => 'admin:admin'], function () {
+
+				Route::get('/','AdminController@show');
+				Route::get('getAdminregister','AdminController@getAdminregister');
+				Route::post('postAdminregister','AdminController@postAdminregister')->name('postAdminregister');
+				Route::get('userpanel','AdminController@userpanel');
+                Route::post('/update_role/{user}', 'AdminController@update_role');
+                Route::get('artMang','AdminController@getartMang');
+				Route::any('logout', 'AdminAuth@logout');
+
+				Route::get('posts/{post}/edit','AdminController@edit');
+
+				Route::post('posts/{post}/update','AdminController@update');
+
+				Route::get('posts/{post}/delete','AdminController@delete');
+			});
+
+	});
